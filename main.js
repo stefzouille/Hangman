@@ -8,8 +8,17 @@ const chalk = require('chalk')
 
 
 const startGame = () => {
-  const wordStr = "salut"
-  let word = wordStr.split('')
+const { randomInt } = require('crypto')
+
+//const words = ['coucou', 'toto', 'tata', 'coco']
+const words = ['coupe', 'tito', 'tati', 'coca']
+
+const n = randomInt(0, words.length)
+//console.log(`random words: ${words[n]}`)
+
+  //const wordStr = words[n]
+  let word = words[n].split('')
+  //let word = wordStr.split('')
   //console.log(word)
   //word = ["s", "a", "l", "u", "t"]
 
@@ -18,7 +27,7 @@ const startGame = () => {
   //console.log(secret)
 
   let count = 0
-  while (count < secret.length) {
+  while (count < secret.length + 2) {
     const input = readlineSync.question(chalk.blue(`Veuillez entrer un caractères: \n   ${secret}    `))
     console.log(chalk.yellow('\nIl vous reste', (chalk.red(secret.length + 2 - count)), 'tentative(s)'))
     //for (let index = 0; index < word.length; ++index) {
