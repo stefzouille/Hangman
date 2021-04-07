@@ -31,7 +31,7 @@ const startGame = () => {
       if(index !== -1) {
         secret[word.indexOf(input)] = input.replace()
         
-        // faire une boucle pour verifier si 2 fois la meme lettre
+        // faire une boucle pour verifier si 2 fois la meme lettre ne fonctionne pas mais presque
           var indices = [];
           var idx = word.indexOf(input);
           while (idx != -1) {
