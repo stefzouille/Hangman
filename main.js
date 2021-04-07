@@ -13,7 +13,7 @@ const startGame = () => {
     //pour test des mots rentré par user mettre ligne 11 en off et ligne 12 en on
     //declare ma variable avec le chemin de mon dico passer en fichier txt
     //const words = fs.readFileSync('./dico.txt', 'utf-8').split('\n')
-   const words = ['pop', 'top']
+   const words = ['pop', 'pop']
     //fait un random de mon fichier txt dico
    const n = randomInt(0, words.length)
     //variable word du random passé en tab
@@ -32,7 +32,18 @@ const startGame = () => {
         secret[word.indexOf(input)] = input.replace()
         
         // faire une boucle pour verifier si 2 fois la meme lettre
-        
+          var indices = [];
+          var idx = word.indexOf(input);
+          while (idx != -1) {
+            indices.push(idx);
+              idx = word.indexOf(input, idx + 1);
+                indices.push(idx).replace()
+              console.log(indices)
+              break
+          }
+
+
+
         
         //si la lettre entré n est pas bonne affiche ceci
       } else {
