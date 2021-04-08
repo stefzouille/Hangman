@@ -69,7 +69,11 @@ const startGame = () => {
   }
 }
 startGame()
-
+// try {
+  
+// } catch (e) {
+//   console.error(e.toString())
+// }
 
 
 
